@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "gmail-mcp": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "C:\\ABSOLUTE\\PATH\\TO\\PARENT\\FOLDER\\mcp-gmail-server",
+        "run",
+        "python",
+        "server.py"
+      ]
+    }
+  }
+}
