@@ -15,13 +15,13 @@ def get_unread_emails_tool(max_results: int = 5):
     # keep only what you want the model to see
     return [
         {
-            "message_id": e["id"],
-            "thread_id": e["threadId"],
-            "from": e["from"],
-            "subject": e["subject"],
-            "snippet": e["snippet"],
+            "message_id": e.get("id", ""),
+            "thread_id": e.get("threadId", ""),
+            "from": e.get("from", ""),
+            "subject": e.get("subject", ""),
+            "snippet": e.get("snippet", ""),
             # optional - sometimes you may want to return only snippet for privacy
-            "body": e["body"],
+            "body": e.get("body", ""),
         }
         for e in emails
     ]
